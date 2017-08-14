@@ -84,7 +84,7 @@ apenas uma única vez.
 <li>    .split('-')</li>
 <li>    .map((item, indice) => item - indice % 2)</li>
 <li>);</li>
-<ul>
+</ul>
 
 
 <p>Podemos ver que desta forma, usando o símbolo <b>=></b> para functions que só tem uma linha, retirar a verbosidade do nosso código. Desta forma, podemos retornar tudo que teríamos denttro do nosso bloco sem nem mesmo digitar return. É isso que acontece em <b>=> item - indice%2.
