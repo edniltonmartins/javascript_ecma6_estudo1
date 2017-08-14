@@ -96,7 +96,7 @@ apenas uma única vez.
 
 <ul>
 <li>constructor(){</li> 
-<li>    throw new Error("Mensagem desejada"); 
+<li>    throw new Error("Mensagem desejada"); </li>
 <li>}</li>
 </ul>
 
