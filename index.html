@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8"/>
         <title>Testes ECMA6
         </title>
-    </head>
-    <body>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/bootstrap-theme.css">
 
-        <script src="./js/model/Negociacao.js"></script>
+    </head>
+    <body class="container">
+        <h1 class="text-center">Negociações</h1>
+        <form class="form" onsubmit="negociacaoController.adiciona(event);">
+            <div class="form-group">
+                <label for="data">Data</label>
+                <input type="date" name="data" id="data" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="valor">Valor</label>
+                <input type="number" name="valor" id="valor" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="quantidade">Quantidade</label>
+                <input type="number" name="quantidade" id="quantidade" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary text-center" type="submit" name="incluir" id="incluir">Incluir</button>
+            </div>
+
+        </form>
+
+        <div class="text-center">
+                <button class="btn btn-primary text-center" type="button">
+                    Importar Negociações
+                </button>
+                <button class="btn btn-primary text-center" type="button">
+                    Apagar
+                </button>
+            </div> 
+            <br>
+            <br>
+            
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>DATA</th>
+                        <th>QUANTIDADE</th>
+                        <th>VALOR</th>
+                        <th>VOLUME</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                </tbody>
+                
+                <tfoot>
+                </tfoot>
+            </table>
+
+        <script src="js/model/Negociacao.js"></script>
+        <script src="js/controller/NegociacaoController.js"></script>
         <script>
-           for(let x=1; x<=100; x++){
-               let nome = "Ed";
-               console.log(x);
-           }
-           console.log(x);
-           console.log(nome);
+            let negociacaoController = new NegociacaoController();
         </script>
     </body>
 </html>
